@@ -1,0 +1,70 @@
+.contact {
+    padding: 2rem 5%;
+    grid-column: 1/3;
+
+    @media screen and (max-width : $bp-tablet) {
+        grid-column: 1/-1;
+    }
+
+    font-family: $f-rubik;
+    text-transform: uppercase;
+    
+
+
+    &--heading {
+
+
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+
+
+       
+
+
+    }
+
+
+
+    label {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+
+        &>* {
+            display: block;
+        }
+
+        span {
+            color: $c-white;
+            margin-bottom: 1rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            margin-bottom: 2rem;
+            background: hsla(25, 50%, 87%, .1);
+            border: 2px solid transparent;
+            border-bottom: 2px solid $c-green-icons;
+            border-radius: 3px;
+            font-family: inherit;
+            color: $c-white;
+            font-size : inherit ;
+
+
+
+            &:focus,
+            &:hover {
+                border: 2px solid $c-green-icons;
+            }
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+    }
+}

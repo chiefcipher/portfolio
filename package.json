@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap-p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass scss/main.scss scss/main.css -w ",
+    "server": "live-server --browser=firefox",
+    "begin": "npm-run-all --parallel watch server",
+    "compile:sass": "node-sass scss/main.scss scss/build/main.comp.css",
+    "concat:css": "concat -o scss/build/main.concat.css scss/build/main.comp.css" ,
+    "prefix:css" : "postcss scss/build/main.concat.css --use autoprefixer -o scss/build/main.prefix.css" , 
+    "compress:css" : "node-sass scss/build/main.prefix.css scss/main.css --output-style compressed " ,
+    "build:process" : "npm-run-all compile:sass concat:css prefix:css compress:css" 
+  },
+  "browserslist" : "last 4 versions" ,
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.0",
+    "live-server": "^1.2.1",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0"
+  },
+  "devDependencies": {
+    "concat": "^1.0.3"
+  }
+}

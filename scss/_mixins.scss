@@ -1,0 +1,43 @@
+
+
+//MIXINS 
+//... CREATING BEFORE AND AFTER ELEMENT TO ANIMATE 
+@mixin beforeAnimate { 
+
+    position: relative ;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 3%;
+        height: 3px;
+        position: absolute;
+        background: $c-green;
+        transition: 0.3s linear;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+    }
+
+    &::after {
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+@mixin beforeAnimateParentMovement  {
+    
+    &:hover > *   {
+        &::after {
+            transform: translateX(1000%);
+        }
+
+        &::before {
+            transform: translateX(-1000%);
+        }
+}
+
+}

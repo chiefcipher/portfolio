@@ -1,0 +1,174 @@
+.t-uppercase {
+    text-transform: uppercase;
+}
+
+.t-center {
+    text-align: center;
+}
+
+
+.mb-10 {
+    margin-bottom: 1rem;
+}
+
+.mb-20 {
+    margin-bottom: 2rem;
+}
+
+.ptb-10 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.ptb-20 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ptb-30 {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+
+.ptb-40 {
+    padding-bottom: 4rem;
+    padding-top: 4rem
+}
+
+.p-10 {
+    padding: 1rem;
+}
+
+
+.p-20 {
+    padding: 2rem;
+
+}
+
+.p-30 {
+    padding: 3rem;
+}
+
+.p-40 {
+    padding: 4rem;
+}
+
+.pb-10 { 
+    padding-bottom: 1rem ;
+}
+.pb-20 { 
+    padding-bottom: 2rem ;
+}
+.pb-30 { 
+    padding-bottom:3rem ;
+}
+.pb-40 { 
+    padding-bottom: 4rem;
+}
+.mt-10 {
+    margin-top: 1rem;
+}
+
+.mt-20 {
+    margin-top: 2rem;
+}
+
+.mt-30 {
+    margin-top: 3rem;
+}
+
+.mt-40 {
+    margin-top: 4rem;
+}
+
+.mt-50 {
+    margin-top: 5rem;
+}
+
+
+//USED IN SECTION STACK, PROJECTS AND ABOUT 
+.s-heading-effect {
+    padding: 1rem;
+    position: relative;
+
+    span {
+        position: relative;
+        z-index: 5;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        transform-origin: bottom;
+        transition: transform .2s ease-in-out;
+        left: 0;
+        bottom: 0;
+
+    }
+
+    &::before {
+        width: 3px;
+        transform: scaleY(0.05);
+        background: $c-green;
+        z-index: 3;
+
+    }
+
+    &::after {
+        background: linear-gradient(to right, hsla(104, 10%, 40%, 0.15), hsla(203, 10%, 40%, .1));
+        width: 100%;
+        z-index: 2;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition-delay: .3s;
+
+    }
+
+
+
+}
+
+.activate-s-heading-effect:hover {
+    .s-heading-effect {
+
+        &::before {
+            transform: scaleY(1);
+
+        }
+
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+
+.highlight {
+    color: $c-green;
+    cursor: pointer;
+}
+
+
+//HALF UNDERLINE TO SECTION HEADING 
+.s-heading-50 {
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background: $c-green-icons;
+        bottom: 0;
+        right: 50%;
+        transform: translateX(50%) translateY(3px);
+
+        @media screen and (min-width : $bp-mobile-l) {
+            width: 25%;
+        }
+
+    }
+}

@@ -1,0 +1,90 @@
+.section__heading { 
+    font-weight : 300 ; 
+    font-size : 2rem ; 
+    color : $c-green ;
+    text-transform: uppercase;
+    cursor : pointer ; 
+
+}
+
+
+
+.btn { 
+    text-decoration: none ; 
+    outline: none ; 
+    border : none ; 
+    cursor : pointer; 
+
+    &--project { 
+        display : inline-block ; 
+        padding : 1rem 2rem ; 
+        border-radius : 5px ; 
+        border : 2px solid transparent ; 
+        transition : border .2s , background .2s ; 
+        letter-spacing : 0.05em ; 
+        
+
+        &:link , 
+        &:visited { 
+            color :  $c-green  ; 
+            background : rgba($c-white,.1) ; 
+            
+        }
+
+        &:active , 
+        &:hover { 
+            background : transparent ; 
+            border : 2px solid $c-green  ;
+        }
+
+        &-source { 
+            margin-right : 1rem ; 
+            margin-bottom : 1rem ; 
+
+
+        }
+        &-live { 
+            margin-left : 1rem ; 
+        }
+        @media screen and (max-width : 400px ) { 
+            &-source { 
+                margin-right : 0 ; 
+                margin-bottom : 1rem ; 
+    
+    
+            }
+            &-live { 
+                margin-left : 0 ; 
+            }     
+        }
+
+    }
+
+    &--contact { 
+        padding : 1rem 2rem ;
+        width : 100% ;  
+        font-size : 1.4rem ;
+        font-weight: 400;
+        text-transform: uppercase;
+        background : darken($c-green,20%) ; 
+        cursor : pointer ; 
+        border-radius: 3px ;
+        border : 2px solid transparent ; 
+        transition: .2s linear ;
+        color : $c-t-white ; 
+        letter-spacing: .05em ;
+
+
+        &:hover { 
+            border : 2px solid $c-green ; 
+            background : transparent;
+            color : $c-t-white  ; 
+
+        }
+
+    }
+}
+
+
+
+

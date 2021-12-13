@@ -1,0 +1,69 @@
+//STYLE FOR LOADER 
+.loader  { 
+    color : $c-green-icons ; 
+    font-family: $f-rubik ; 
+    display:  flex ; 
+    width : 100% ; 
+    height : 100vh ; 
+    flex-direction: column ;
+    align-items: center ; 
+    justify-content: center ; 
+    position : absolute ;
+    top : 0 ; 
+    left : 0 ;
+    background: $c-bg-dark; 
+    z-index:  30;
+
+    &__text { 
+        text-transform : uppercase ;
+        font-size : 2rem ; 
+        margin-top : 5rem ;
+        
+    }
+
+}
+
+
+//BOXES 
+.loader-boxes-container { 
+    width : 10rem ;
+    display: flex  ;
+
+    justify-content: space-between;
+
+    .loader-box { 
+        width : 1rem ; 
+        height : 1rem ; 
+        background : $c-green-icons ; 
+        animation : loader-box-effect 1s linear infinite ; 
+    }
+
+    .loader-box:nth-child(2) { 
+        animation-delay: .1s ;
+    }
+    .loader-box:nth-child(3) { 
+        animation-delay: .2s ;
+    }
+    .loader-box:nth-child(3) { 
+        animation-delay: .3s ;
+    }
+    .loader-box:nth-child(4) { 
+        animation-delay: .4s ;
+    }
+    .loader-box:nth-child(5) { 
+        animation-delay: .5s ;
+    }
+}
+
+@keyframes loader-box-effect { 
+    25% { 
+        transform : translateY(-2rem) rotate(360deg)
+
+
+    }
+
+    70% { 
+        transform : translateY(2rem) rotate(-360deg)
+    }
+
+}

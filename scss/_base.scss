@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10/16px 
+}
+
+body {
+    font-size: 1.6rem;
+    padding: 0 3%;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    top: 0;
+    left: 0;
+    background: $c-bg-dark;
+
+}
+
+.container {
+    font-family: $f-rubik, sans-serif;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-rows: min-content min-content;
+    grid-auto-flow: row dense;
+    position: relative;
+
+    grid-gap: 2rem;
+
+}
+
+section {
+    border-bottom: 1px solid lighten($c-bg-dark, 5%)
+}

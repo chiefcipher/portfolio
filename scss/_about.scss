@@ -1,0 +1,25 @@
+.about { 
+    grid-column : 1/3 ; 
+    grid-row: 2/3 ; 
+    background : $c-bg-dark; 
+
+    padding-bottom: 2rem ;
+    font-family : $f-rubik ; 
+
+    @media screen and (max-width : $bp-tablet) { 
+        grid-column : 1/-1 ; 
+    }
+    &__body { 
+        font-size : 1.4rem; 
+        color : $c-t-white ; 
+        line-height : 1.5; 
+        
+
+
+    }
+
+
+
+} 
+
+

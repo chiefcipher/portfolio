@@ -1,0 +1,107 @@
+
+
+.animated-hero-bg { 
+    grid-column: 1/-1  ; 
+    grid-row : 1/2 ;
+    z-index: -1 ;
+    position: relative ;
+    background : $c-bg-dark; 
+
+    .cont { 
+        position : absolute; 
+        top : 0 ; 
+        left : 50% ; 
+        width : 50% ; 
+        height : 70% ;
+        overflow: hidden;
+
+        .squares  { 
+            width : 1rem ; 
+            height : 1rem ; 
+            border-radius : 20% ;
+            background : $c-green ;
+            position: absolute  ; 
+
+
+            &:nth-child(even) { 
+                top : 0 ;
+                animation : topToBottom 3s linear infinite; 
+            }
+            &:nth-child(odd) { 
+                bottom : -10% ; 
+                animation : bottomToTop  3s linear infinite ;  
+
+            }
+
+            &:nth-child(1) { 
+                left : 10% ; 
+                animation-delay : .3s ; 
+            }
+            &:nth-child(2) { 
+                left : 20% ; 
+                animation-delay : 1s ; 
+
+            }
+            &:nth-child(3) { 
+                left : 30% ; 
+                animation-delay : 5s ; 
+
+            }
+            &:nth-child(4) { 
+                left : 40% ; 
+                animation-delay : 5s ; 
+
+            }
+            &:nth-child(5) { 
+                left : 50% ; 
+                animation-delay : 9s ; 
+
+            }
+            &:nth-child(6) { 
+                left : 60% ; 
+                animation-delay : 3s ; 
+
+            }
+            &:nth-child(7) { 
+                left : 70% ; 
+                animation-delay : 2.5s ; 
+
+            }
+            &:nth-child(8) { 
+                left : 80% ; 
+                animation-delay : 0.8s ; 
+
+            }
+
+
+        }
+    }
+   
+}
+
+@keyframes  bottomToTop {  
+    0% { 
+        transform : translateY(20px)  ; 
+
+    }
+    50% { 
+        border-radius: 50% ;
+
+    }
+   100% {
+        transform: translateY(-300px ) ;
+   }
+} 
+
+@keyframes  topToBottom{  
+    0% { 
+        transform : translateY(-30px)  ; 
+
+    }
+    50% { 
+        transform : translateX(-50%)
+    }
+   100% {
+        transform: translateY(320px ) ;
+   }
+} 

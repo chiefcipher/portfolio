@@ -1,0 +1,90 @@
+.hero {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  padding: 10rem 0 3rem 0;
+  height: min-content;
+
+  color: $c-b-white;
+
+  @media screen and (min-width: $bp-tablet) {
+    text-align: center;
+  }
+
+  & > * {
+    margin: 3rem 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: 4rem 0;
+    }
+  }
+
+  .hello {
+    color: $c-b-white;
+    font-size : 1.6rem ; 
+
+    
+    @media screen and (min-width: $bp-tablet) {
+        font-size: 1.8rem;
+    }
+  }
+
+  .hello,
+  .abilities {
+    font-family: $f-rubik;
+  }
+
+  .name {
+    font-family: $f-lato;
+
+    font-size: 4rem;
+    font-weight: 200;
+    color: hsl(129, 80%, 67%);
+    text-transform: uppercase;
+    span {
+        display: block;
+      }
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 5rem;
+
+      span {
+        display: inline ;
+      }
+    }
+  
+    p {
+      font-size: 0.3em;
+      color: hsl(129, 50%, 67%);
+    }
+  }
+
+  .abilities {
+    list-style: none;
+
+    .ability {
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      margin: 1rem 0;
+      letter-spacing : 0.03em ;
+
+      @media screen and (min-width: $bp-tablet) {
+        display: block;
+        font-size: 1.4rem;
+        margin: 1rem 0;
+      }
+
+      &::before {
+        content: "*";
+        display: block;
+        height: 1rem;
+        color: $c-green;
+        margin-right: 2px;
+
+        @media screen and (min-width: $bp-tablet) {
+          display: none;
+        }
+      }
+    }
+  }
+}

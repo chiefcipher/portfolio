@@ -1,0 +1,87 @@
+.stack {
+  grid-column: 3/-1;
+  grid-row: 2/3;
+
+  font-family: $f-rubik;
+  background: $c-bg-dark; 
+  padding-bottom: 2rem ;
+  ;
+
+  @media screen and (max-width: $bp-tablet) {
+    grid-column: 1/-1;
+    grid-row: 3/4;
+  }
+
+
+
+
+  &__block-container {
+    display : grid ; 
+    grid-auto-flow: row dense ; 
+    grid-template-columns: repeat( auto-fit, minmax(15rem , 1fr ));
+    grid-gap : 2rem ; 
+
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center ;
+
+    &--text {
+      font-size: 1.4rem;
+      color: $c-t-white ;
+      padding: 1rem 0;
+      margin-left: 1rem;
+      
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 1rem;
+        background: $c-icon-bg;
+        mask-size: cover;
+        -webkit-mask-size: cover;
+      }
+
+      &.html::before {
+        mask-image: url("../assets/img/html5.svg");
+        -webkit-mask-image: url("../assets/img/html5.svg");
+      }
+
+      
+      &.css::before {
+        mask-image: url("../assets/img/css3-alt.svg");
+        -webkit-mask-image: url("../assets/img/css3-alt.svg");
+      }
+
+      
+      &.sass::before {
+        mask-image: url("../assets/img/sass.svg");
+        -webkit-mask-image: url("../assets/img/sass.svg");
+      }
+
+      
+      &.bootstrap::before {
+        mask-image: url("../assets/img/bootstrap.svg");
+        -webkit-mask-image: url("../assets/img/bootstrap.svg");
+      }
+
+      &.git::before {
+        mask-image: url("../assets/img/github.svg");
+
+        -webkit-mask-image: url("../assets/img/github.svg");
+      }
+
+      &.js::before {
+        mask-image: url("../assets/img/js.svg");
+
+        -webkit-mask-image: url("../assets/img/js.svg");
+      }
+    }
+  }
+}
