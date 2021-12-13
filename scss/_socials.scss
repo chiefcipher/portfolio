@@ -1,7 +1,7 @@
 .socials {
     grid-column: 3/5;
     color: $c-t-white;
-    font-family: $f-rubik;
+    font-family: $f-rubik , sans-serif ;
 
 
     @media screen and (max-width: $bp-tablet) {

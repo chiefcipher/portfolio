@@ -30,11 +30,11 @@
 
   .hello,
   .abilities {
-    font-family: $f-rubik;
+    font-family: $f-rubik , sans-serif ;
   }
 
   .name {
-    font-family: $f-lato;
+    font-family: $f-lato , sans-serif ;
 
     font-size: 4rem;
     font-weight: 200;
